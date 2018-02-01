@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kotlin-Wechat-Sample</string>
+    <string name="action_intent_main">跳转</string>
+    <string name="action_search_weather">天气查询</string>
+</resources>

@@ -24,6 +24,7 @@
         <activity android:name=".view.main.MainActivity"
             android:theme="@style/Simple_Activity"/>
         <activity android:name=".view.wechart.WechatActivity"></activity>
+        <activity android:name=".view.friends.FriendActivity"></activity>
     </application>
 
 </manifest>

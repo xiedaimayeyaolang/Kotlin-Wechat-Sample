@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import org.jetbrains.anko.startActivity
 import sample.wechat.kotlin.R
 import sample.wechat.kotlin.ext.onClick
+import sample.wechat.kotlin.view.friends.FriendActivity
 import sample.wechat.kotlin.view.wechart.WechatActivity
 
 class RecyclerViewAdapter(private val mContext: Context) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
@@ -19,7 +20,13 @@ class RecyclerViewAdapter(private val mContext: Context) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: RecyclerViewAdapter.ViewHolder, position: Int) {
         val view = holder.mView
-        view.onClick { mContext.startActivity<WechatActivity>() }
+        view.onClick {
+            when(mContext){
+                is WechatActivity -> mContext.startActivity<FriendActivity>()
+                else -> mContext.startActivity<WechatActivity>()
+            }
+//            mContext.startActivity<WechatActivity>()
+        }
     }
 
     override fun getItemCount(): Int {
